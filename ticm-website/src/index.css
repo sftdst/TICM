@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* TICM Official Palette */
+  --gold: #C9A84C;
+  --gold-light: #D4BA6A;
+  --gold-dark: #A88A3A;
+  --gold-glow: rgba(201, 168, 76, 0.15);
+  --gold-glow-strong: rgba(201, 168, 76, 0.3);
+  --gold-subtle: rgba(201, 168, 76, 0.08);
+
+  --anthracite: #1E2A38;
+  --anthracite-light: #263545;
+  --anthracite-dark: #141E2A;
+
+  --ardoise: #3D5166;
+  --ardoise-light: #4A6278;
+  --ardoise-dark: #324455;
+
+  /* Grays */
+  --gray-100: #F0F2F5;
+  --gray-200: #E2E6EB;
+  --gray-300: #C8CED6;
+  --gray-400: #9BA5B0;
+  --gray-500: #6B7885;
+  --gray-600: #4D5A66;
+  --gray-700: #36414D;
+
+  /* Semantic */
+  --bg-primary: #F5F7FA;
+  --bg-secondary: #EAEFF4;
+  --bg-card: #FFFFFF;
+  --bg-dark: var(--anthracite);
+  --accent-primary: var(--gold);
+  --accent-hover: var(--gold-light);
+  --text-primary: var(--anthracite);
+  --text-secondary: var(--gray-500);
+  --text-muted: var(--gray-400);
+  --text-on-dark: #F0F2F5;
+  --separator: var(--gray-200);
+  --border-card: var(--gray-200);
+
+  --shadow-sm: 0 2px 8px rgba(30, 42, 56, 0.06);
+  --shadow-md: 0 8px 30px rgba(30, 42, 56, 0.1);
+  --shadow-lg: 0 20px 60px rgba(30, 42, 56, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+}
+
+.section-subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  text-transform: none;
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 24px;
+  line-height: 1.7;
+}
+
+.section-header {
+  margin-bottom: 64px;
+}
+
+/* Dark section variant */
+.section-dark {
+  background: var(--anthracite);
+  color: var(--text-on-dark);
+}
+
+.section-dark .section-title {
+  color: var(--text-on-dark);
+}
+
+.section-dark .section-subtitle {
+  color: var(--gray-400);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--anthracite);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ardoise);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}

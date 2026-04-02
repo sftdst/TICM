@@ -1,0 +1,99 @@
+.commitments-section {
+  background: var(--anthracite);
+  padding: 120px 0;
+}
+
+.commitments-section .section-title {
+  color: #FFFFFF;
+}
+
+.commitments-section .section-title::after {
+  background: var(--gold);
+}
+
+.commitments-section .section-subtitle {
+  color: var(--ardoise-light);
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.commitment-card {
+  background: var(--anthracite-light);
+  border: 1px solid var(--ardoise-dark);
+  padding: 36px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.commitment-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.commitment-number {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(201, 168, 76, 0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.commitment-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--ardoise);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.commitment-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.commitment-accent {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.commitment-desc {
+  font-size: 0.85rem;
+  color: var(--ardoise-light);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .commitments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .commitments-grid {
+    grid-template-columns: 1fr;
+  }
+}

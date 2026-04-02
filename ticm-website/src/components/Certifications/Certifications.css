@@ -1,0 +1,89 @@
+.certifications-section {
+  background: var(--bg-secondary);
+  padding: 120px 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-badge:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-icon-wrap {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(201, 168, 76, 0.04);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.cert-badge:hover .cert-icon-wrap {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.cert-icon {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--gold-dark);
+  letter-spacing: 0.05em;
+}
+
+.cert-name {
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 2px 0;
+}
+
+.cert-category {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}

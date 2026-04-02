@@ -1,0 +1,175 @@
+.references-section {
+  background: var(--bg-primary);
+  padding: 120px 0;
+}
+
+.references-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--ardoise), var(--ardoise-dark));
+}
+
+.reference-item {
+  display: flex;
+  gap: 32px;
+  position: relative;
+  padding: 0 0 24px 0;
+}
+
+.reference-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.node-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--bg-primary);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.reference-item:hover .node-dot {
+  background: var(--gold);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+}
+
+.node-line {
+  width: 2px;
+  flex: 1;
+  background: var(--gray-200);
+}
+
+.reference-card {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  padding: 24px 28px;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow-sm);
+  border-left: 3px solid transparent;
+}
+
+.reference-card:hover {
+  border-left-color: var(--gold);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+.reference-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.reference-logo-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-200);
+  background: var(--bg-secondary);
+  padding: 5px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.reference-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.reference-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reference-client {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.reference-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border: 1px solid var(--gray-200);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reference-project {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.reference-details {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.reference-period {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--gold-dark);
+}
+
+@media (max-width: 600px) {
+  .timeline-line {
+    left: 10px;
+  }
+
+  .reference-node {
+    width: 20px;
+  }
+
+  .reference-card {
+    padding: 16px 20px;
+  }
+
+  .reference-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .reference-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

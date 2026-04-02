@@ -1,0 +1,113 @@
+.materials-section {
+  background: var(--anthracite-light);
+  padding: 120px 0;
+  position: relative;
+}
+
+.materials-section .section-title {
+  color: #FFFFFF;
+}
+
+.materials-section .section-title::after {
+  background: var(--gold);
+}
+
+.materials-section .section-subtitle {
+  color: var(--ardoise-light);
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.material-card {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  background: var(--anthracite);
+  border: 1px solid var(--ardoise-dark);
+  transition: all 0.4s ease;
+  align-items: center;
+}
+
+.material-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.material-swatch {
+  width: 52px;
+  height: 52px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.swatch-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 60%
+  );
+  animation: swatchShine 3.5s ease-in-out infinite;
+}
+
+@keyframes swatchShine {
+  0%, 100% { transform: translate(-30%, -30%); }
+  50% { transform: translate(30%, 30%); }
+}
+
+.material-info {
+  flex: 1;
+}
+
+.material-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+
+.material-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.material-sigle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.material-app {
+  font-size: 0.78rem;
+  color: var(--ardoise-light);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+}

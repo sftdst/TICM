@@ -1,0 +1,144 @@
+.expertise-section {
+  background: var(--bg-primary);
+  padding: 120px 0;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.expertise-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.expertise-card:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-sheen {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    135deg,
+    transparent 42%,
+    rgba(201, 168, 76, 0.04) 46%,
+    rgba(201, 168, 76, 0.08) 50%,
+    rgba(201, 168, 76, 0.04) 54%,
+    transparent 58%
+  );
+  transition: transform 1s ease;
+  pointer-events: none;
+}
+
+.expertise-card:hover .card-sheen {
+  transform: translate(50%, 50%);
+}
+
+.card-top-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.expertise-card:hover .card-top-bar {
+  opacity: 1;
+}
+
+.card-icon-wrap {
+  margin: 32px 32px 0;
+  font-size: 2.2rem;
+  color: var(--gold);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(201, 168, 76, 0.04);
+  transition: all 0.4s ease;
+}
+
+.expertise-card:hover .card-icon-wrap {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+}
+
+.card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 20px 32px 0;
+  text-transform: uppercase;
+}
+
+.card-subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 4px 32px 0;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 16px 32px 0;
+}
+
+.card-features {
+  margin: 20px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.feat-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.card-num {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(30, 42, 56, 0.03);
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
